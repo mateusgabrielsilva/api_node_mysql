@@ -19,19 +19,19 @@ server.post('/addUser', async (req, res) => {
     let queryInsert = `INSERT INTO user (name, email, password, active) VALUES (?, ?, ?, ?);`;
 
     // Valores a serem inseridos
-    let userName  = "Melissa Fontoura"
-    let userEmail = "melissafontoura@gmail.com"
-    let userPassword = "Melissa"
+    let userName  = "Isadora Fontoura"
+    let userEmail = "isadorafontoura@gmail.com"
+    let userPassword = "Isadora"
     let userActive = 1
 
     // Criando a query 
     con.query(queryInsert, [userName, userEmail, userPassword, userActive], async (err, rows) => {
-        if (err) throw err;
+       if (err) throw err;
         console.log("Linha inserida com sucesso!")
+        
         res.send(rows)
     })
 })
-
 
 // Startando o servidor
 server.listen(3000, () => {
