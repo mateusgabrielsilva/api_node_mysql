@@ -19,9 +19,9 @@ server.post('/addUser', async (req, res) => {
     let queryInsert = `INSERT INTO user (name, email, password, active) VALUES (?, ?, ?, ?);`;
 
     // Valores a serem inseridos
-    let userName  = "Isadora Fontoura"
-    let userEmail = "isadorafontoura@gmail.com"
-    let userPassword = "Isadora"
+    let userName  = "Gabrielle Fontoura"
+    let userEmail = "gabriellefontoura@gmail.com"
+    let userPassword = "Gabrielle"
     let userActive = 1
 
     // Criando a query 
@@ -31,7 +31,7 @@ server.post('/addUser', async (req, res) => {
         
         res.send(rows)
     })
-})
+});
 
 // Startando o servidor
 server.listen(3000, () => {
